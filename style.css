@@ -1,77 +1,117 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #0e1a2b;
-    background-image: url('ai.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-blend-mode: overlay; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white; 
-    height: 100vh; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  .wrapper {
-    width: 90%;
-    max-width: 1200px;
-  }
-  
-  .card-container {
-    display: flex;
+
+body {
+  background-color: #0e1a2b;
+  background-image: url('ai.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-blend-mode: overlay; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white; 
+  min-height: 100vh; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.left-text {
+  text-align: center;
+}
+
+.left-text h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.left-text p {
+  font-size: 1rem;
+  color: #c0c9d6;
+  line-height: 1.5;
+}
+
+.right-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #192b46;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #b0bcd3;
+}
+
+.card.active {
+  border-color: #4299e1;
+}
+
+/* Desktop view: Enhance layout for larger screens */
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 40px;
+  }
+
+  .card-container {
+    flex-direction: row;
+    align-items: flex-start;
     gap: 60px;
   }
-  
+
   .left-text {
     flex: 1;
+    text-align: left;
   }
-  
-  .left-text h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .left-text p {
-    font-size: 1rem;
-    color: #c0c9d6;
-    line-height: 1.6;
-  }
-  
+
   .right-cards {
     flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
   }
-  
-  .card {
-    background-color: #192b46;
-    padding: 20px;
-    border-radius: 12px;
-    border: 2px solid transparent;
-    transition: border 0.3s ease;
+
+  .left-text h1 {
+    font-size: 2rem;
   }
-  
+
+  .left-text p {
+    font-size: 1rem;
+  }
+
   .card h2 {
-    margin-bottom: 10px;
     font-size: 1.1rem;
   }
-  
+
   .card p {
     font-size: 0.9rem;
-    color: #b0bcd3;
   }
-  
-  .card.active {
-    border-color: #4299e1;
-  }
-  
+}
